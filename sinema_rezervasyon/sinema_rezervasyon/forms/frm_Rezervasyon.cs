@@ -66,6 +66,8 @@ namespace sinema_rezervasyon
             while (h.Next != null)
             {
                 var  b = Controls.Find("btn_musteri_" + koltukNo.ToString(), true)[0];
+                Controls.Remove(b);
+
                 b = (Button)b; 
 
                 if (h.Data.aktifMi)
@@ -73,6 +75,7 @@ namespace sinema_rezervasyon
                 else
                     b.BackColor = Color.Red;
 
+                Controls.Add(b);
                 h = h.Next;
             }
             var t = BL.koltukListesi.getAvailableSeatCount();
