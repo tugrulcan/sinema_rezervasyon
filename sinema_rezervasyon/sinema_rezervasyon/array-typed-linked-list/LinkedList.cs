@@ -170,7 +170,7 @@ namespace LinkedListImplementation
             int count = 0;
             while (n.Next != null)
             {
-                if (n.Data.aktifMi == false)
+                if (n.Data.rezerveEdilebilirMi == false)
                     count++;
 
                 n = n.Next;

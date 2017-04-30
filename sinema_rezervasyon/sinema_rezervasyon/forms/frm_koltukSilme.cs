@@ -48,7 +48,7 @@ namespace sinema_rezervasyon.forms
             string s = BL.koltukListesi.DisplayElements();
 
             BL.koltukListesi.DeletePos(silinecek.Data.koltukNo);
-            BL.koltukListesi.InsertPos(silinecek.Data.koltukNo, new Koltuk() { aktifMi = true, koltukNo = silinecek.Data.koltukNo });
+            BL.koltukListesi.InsertPos(silinecek.Data.koltukNo, new Koltuk() { rezerveEdilebilirMi = true, koltukNo = silinecek.Data.koltukNo });
             f.koltuklariGuncelle();
             this.Hide();
         }

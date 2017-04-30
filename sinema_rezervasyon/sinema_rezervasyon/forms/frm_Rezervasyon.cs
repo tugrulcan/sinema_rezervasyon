@@ -17,7 +17,7 @@ namespace sinema_rezervasyon
         public frm_RezervasyonListe()
         {
             InitializeComponent();
-            BL.koltukListesi.InsertFirst(new Koltuk() { aktifMi = true }); //61 node, koltuk adlari karismasin diye.  
+            BL.koltukListesi.InsertFirst(new Koltuk() { rezerveEdilebilirMi = true }); //61 node, koltuk adlari karismasin diye.  
         }
 
         
@@ -45,14 +45,15 @@ namespace sinema_rezervasyon
                         Name = "btn_musteri_" + koltuk_no.ToString(),
                         Text = koltuk_no.ToString(),
                         Size = button_size,
-                        BackColor = Color.Chartreuse
+                        BackColor = Color.Chartreuse,
+                        UseVisualStyleBackColor = false 
                     };
                     b.Click += new System.EventHandler(this.btn_musteri_n_Click);
 
                     this.Controls.Add(b);
                     start_location.X += 60;
 
-                    BL.koltukListesi.InsertLast(new Koltuk() { aktifMi = true, koltukNo = koltuk_no });
+                    BL.koltukListesi.InsertLast(new Koltuk() { rezerveEdilebilirMi = true, koltukNo = koltuk_no });
                 }
             }
             var s = BL.koltukListesi.DisplayElements();
@@ -62,25 +63,27 @@ namespace sinema_rezervasyon
         public void koltuklariGuncelle()
         {
             Node h = BL.koltukListesi.Head;
+            h = h.Next; // pass the empty 0'th
             int koltukNo = 1;
             while (h.Next != null)
             {
                 var  b = Controls.Find("btn_musteri_" + koltukNo.ToString(), true)[0];
-                Controls.Remove(b);
-
+                
                 b = (Button)b; 
 
-                if (h.Data.aktifMi)
+                if (h.Data.rezerveEdilebilirMi)
                     b.BackColor = Color.Chartreuse;
                 else
                     b.BackColor = Color.Red;
 
-                Controls.Add(b);
                 h = h.Next;
+                koltukNo++;
             }
             var t = BL.koltukListesi.getAvailableSeatCount();
             var s = BL.koltukListesi.DisplayElements();
             this.txt_toplamMusteriSayisi.Text = t.ToString();
+           
+
         }
 
         private void btn_musteri_n_Click(object sender, EventArgs e)
@@ -90,12 +93,12 @@ namespace sinema_rezervasyon
             b.BackColor = Color.Red;
 
             int koltukNo = Convert.ToInt32(b.Text);
-            frm_MusteriBilgi mbilgi = new frm_MusteriBilgi(koltukNo, this);
 
             Node tiklanan = BL.koltukListesi.GetElement(koltukNo);
 
-            if (tiklanan.Data.aktifMi)
+            if (tiklanan.Data.rezerveEdilebilirMi)
             {
+                frm_MusteriBilgi mbilgi = new frm_MusteriBilgi(koltukNo, this);
                 mbilgi.Show();
             }
             this.koltuklariGuncelle();

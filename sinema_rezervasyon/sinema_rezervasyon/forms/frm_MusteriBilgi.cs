@@ -30,7 +30,7 @@ namespace sinema_rezervasyon.forms
                 Ad = txt_musteriAd.Text,
                 Soyad = txt_soyad.Text,
                 koltukNo = koltukNo,
-                aktifMi = false
+                rezerveEdilebilirMi = false
             };
 
             MessageBox.Show("Müşteri kaydedildi!");
