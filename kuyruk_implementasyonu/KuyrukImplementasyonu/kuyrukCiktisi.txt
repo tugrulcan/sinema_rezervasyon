@@ -1,0 +1,66 @@
+Dairesel kuyruk modeli işletiliyor.
+1. eleman 390 sn sonra dairesel kuyruktan çıktı.
+2. eleman 547 sn sonra dairesel kuyruktan çıktı.
+3. eleman 542 sn sonra dairesel kuyruktan çıktı.
+4. eleman 376 sn sonra dairesel kuyruktan çıktı.
+5. eleman 202 sn sonra dairesel kuyruktan çıktı.
+6. eleman 425 sn sonra dairesel kuyruktan çıktı.
+7. eleman 530 sn sonra dairesel kuyruktan çıktı.
+8. eleman 490 sn sonra dairesel kuyruktan çıktı.
+9. eleman 180 sn sonra dairesel kuyruktan çıktı.
+10. eleman 187 sn sonra dairesel kuyruktan çıktı.
+11. eleman 432 sn sonra dairesel kuyruktan çıktı.
+12. eleman 453 sn sonra dairesel kuyruktan çıktı.
+13. eleman 569 sn sonra dairesel kuyruktan çıktı.
+14. eleman 463 sn sonra dairesel kuyruktan çıktı.
+15. eleman 98 sn sonra dairesel kuyruktan çıktı.
+16. eleman 172 sn sonra dairesel kuyruktan çıktı.
+17. eleman 592 sn sonra dairesel kuyruktan çıktı.
+18. eleman 326 sn sonra dairesel kuyruktan çıktı.
+19. eleman 405 sn sonra dairesel kuyruktan çıktı.
+20. eleman 401 sn sonra dairesel kuyruktan çıktı.
+Dairesel kuyruk tamamlandı! Tamamlanma süresi: 7789
+Öncelikli (artan) kuyruk modeli işletiliyor.
+1. eleman 98 sn sonra (artan) öncelikli kuyruktan çıktı.
+2. eleman 172 sn sonra (artan) öncelikli kuyruktan çıktı.
+3. eleman 180 sn sonra (artan) öncelikli kuyruktan çıktı.
+4. eleman 187 sn sonra (artan) öncelikli kuyruktan çıktı.
+5. eleman 202 sn sonra (artan) öncelikli kuyruktan çıktı.
+6. eleman 326 sn sonra (artan) öncelikli kuyruktan çıktı.
+7. eleman 376 sn sonra (artan) öncelikli kuyruktan çıktı.
+8. eleman 390 sn sonra (artan) öncelikli kuyruktan çıktı.
+9. eleman 401 sn sonra (artan) öncelikli kuyruktan çıktı.
+10. eleman 405 sn sonra (artan) öncelikli kuyruktan çıktı.
+11. eleman 425 sn sonra (artan) öncelikli kuyruktan çıktı.
+12. eleman 432 sn sonra (artan) öncelikli kuyruktan çıktı.
+13. eleman 453 sn sonra (artan) öncelikli kuyruktan çıktı.
+14. eleman 463 sn sonra (artan) öncelikli kuyruktan çıktı.
+15. eleman 490 sn sonra (artan) öncelikli kuyruktan çıktı.
+16. eleman 530 sn sonra (artan) öncelikli kuyruktan çıktı.
+17. eleman 542 sn sonra (artan) öncelikli kuyruktan çıktı.
+18. eleman 547 sn sonra (artan) öncelikli kuyruktan çıktı.
+19. eleman 569 sn sonra (artan) öncelikli kuyruktan çıktı.
+20. eleman 592 sn sonra (artan) öncelikli kuyruktan çıktı.
+(artan) Öncelikli kuyruktan çıkartma tamamlandı! Tamamlanma süresi: 7789
+Öncelikli (azalan) kuyruk modeli işletiliyor.
+1. eleman 592 sn sonra Priority Queue (azalan) kuyruktan çıktı.
+2. eleman 569 sn sonra Priority Queue (azalan) kuyruktan çıktı.
+3. eleman 547 sn sonra Priority Queue (azalan) kuyruktan çıktı.
+4. eleman 542 sn sonra Priority Queue (azalan) kuyruktan çıktı.
+5. eleman 530 sn sonra Priority Queue (azalan) kuyruktan çıktı.
+6. eleman 490 sn sonra Priority Queue (azalan) kuyruktan çıktı.
+7. eleman 463 sn sonra Priority Queue (azalan) kuyruktan çıktı.
+8. eleman 453 sn sonra Priority Queue (azalan) kuyruktan çıktı.
+9. eleman 432 sn sonra Priority Queue (azalan) kuyruktan çıktı.
+10. eleman 425 sn sonra Priority Queue (azalan) kuyruktan çıktı.
+11. eleman 405 sn sonra Priority Queue (azalan) kuyruktan çıktı.
+12. eleman 401 sn sonra Priority Queue (azalan) kuyruktan çıktı.
+13. eleman 390 sn sonra Priority Queue (azalan) kuyruktan çıktı.
+14. eleman 376 sn sonra Priority Queue (azalan) kuyruktan çıktı.
+15. eleman 326 sn sonra Priority Queue (azalan) kuyruktan çıktı.
+16. eleman 202 sn sonra Priority Queue (azalan) kuyruktan çıktı.
+17. eleman 187 sn sonra Priority Queue (azalan) kuyruktan çıktı.
+18. eleman 180 sn sonra Priority Queue (azalan) kuyruktan çıktı.
+19. eleman 172 sn sonra Priority Queue (azalan) kuyruktan çıktı.
+20. eleman 98 sn sonra Priority Queue (azalan) kuyruktan çıktı.
+(azalan) Öncelikli kuyruktan çıkartma tamamlandı! Tamamlanma süresi: 7792
