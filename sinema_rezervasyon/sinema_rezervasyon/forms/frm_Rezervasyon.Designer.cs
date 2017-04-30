@@ -30,6 +30,7 @@
         {
             this.label1 = new System.Windows.Forms.Label();
             this.txt_toplamMusteriSayisi = new System.Windows.Forms.TextBox();
+            this.btn_koltukIptal = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // label1
@@ -49,11 +50,22 @@
             this.txt_toplamMusteriSayisi.Size = new System.Drawing.Size(49, 20);
             this.txt_toplamMusteriSayisi.TabIndex = 1;
             // 
+            // btn_koltukIptal
+            // 
+            this.btn_koltukIptal.Location = new System.Drawing.Point(297, 9);
+            this.btn_koltukIptal.Name = "btn_koltukIptal";
+            this.btn_koltukIptal.Size = new System.Drawing.Size(75, 23);
+            this.btn_koltukIptal.TabIndex = 2;
+            this.btn_koltukIptal.Text = "Koltuk İptali";
+            this.btn_koltukIptal.UseVisualStyleBackColor = true;
+            this.btn_koltukIptal.Click += new System.EventHandler(this.btn_koltukIptal_Click);
+            // 
             // frm_RezervasyonListe
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(741, 480);
+            this.Controls.Add(this.btn_koltukIptal);
             this.Controls.Add(this.txt_toplamMusteriSayisi);
             this.Controls.Add(this.label1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.Fixed3D;
@@ -70,6 +82,7 @@
 
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.TextBox txt_toplamMusteriSayisi;
+        private System.Windows.Forms.Button btn_koltukIptal;
     }
 }
 

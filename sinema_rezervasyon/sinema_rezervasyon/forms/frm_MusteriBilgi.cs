@@ -30,7 +30,7 @@ namespace sinema_rezervasyon.forms
                 Ad = txt_musteriAd.Text,
                 Soyad = txt_soyad.Text,
                 koltukNo = koltukNo,
-                aktifMi = true
+                aktifMi = false
             };
 
             MessageBox.Show("Müşteri kaydedildi!");
@@ -40,5 +40,7 @@ namespace sinema_rezervasyon.forms
             aktifPencere.koltuklariGuncelle();
             this.Close();
         }
+
+       
     }
 }

@@ -51,6 +51,12 @@
     <Compile Include="array-typed-linked-list\Musteri.cs" />
     <Compile Include="array-typed-linked-list\Node.cs" />
     <Compile Include="BL.cs" />
+    <Compile Include="forms\frm_koltukSilme.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="forms\frm_koltukSilme.Designer.cs">
+      <DependentUpon>frm_koltukSilme.cs</DependentUpon>
+    </Compile>
     <Compile Include="forms\frm_MusteriBilgi.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -65,6 +71,9 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="forms\frm_koltukSilme.resx">
+      <DependentUpon>frm_koltukSilme.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="forms\frm_MusteriBilgi.resx">
       <DependentUpon>frm_MusteriBilgi.cs</DependentUpon>
     </EmbeddedResource>

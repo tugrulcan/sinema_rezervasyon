@@ -17,7 +17,7 @@ namespace sinema_rezervasyon
         public frm_RezervasyonListe()
         {
             InitializeComponent();
-            BL.koltukListesi.InsertFirst(new Koltuk() { aktifMi = false }); //61 node, koltuk adlari karismasin diye.  
+            BL.koltukListesi.InsertFirst(new Koltuk() { aktifMi = true }); //61 node, koltuk adlari karismasin diye.  
         }
 
         
@@ -52,9 +52,10 @@ namespace sinema_rezervasyon
                     this.Controls.Add(b);
                     start_location.X += 60;
 
-                    BL.koltukListesi.InsertLast(new Koltuk() { aktifMi = false, koltukNo = koltuk_no });
+                    BL.koltukListesi.InsertLast(new Koltuk() { aktifMi = true, koltukNo = koltuk_no });
                 }
             }
+            var s = BL.koltukListesi.DisplayElements();
             this.txt_toplamMusteriSayisi.Text = BL.koltukListesi.getAvailableSeatCount().ToString();
         }
 
@@ -74,7 +75,9 @@ namespace sinema_rezervasyon
 
                 h = h.Next;
             }
-            this.txt_toplamMusteriSayisi.Text = BL.koltukListesi.getAvailableSeatCount().ToString();
+            var t = BL.koltukListesi.getAvailableSeatCount();
+            var s = BL.koltukListesi.DisplayElements();
+            this.txt_toplamMusteriSayisi.Text = t.ToString();
         }
 
         private void btn_musteri_n_Click(object sender, EventArgs e)
@@ -88,12 +91,19 @@ namespace sinema_rezervasyon
 
             Node tiklanan = BL.koltukListesi.GetElement(koltukNo);
 
-            if (tiklanan.Data.aktifMi == false)
+            if (tiklanan.Data.aktifMi)
             {
                 mbilgi.Show();
             }
+            this.koltuklariGuncelle();
             
 
+        }
+
+        private void btn_koltukIptal_Click(object sender, EventArgs e)
+        {
+            frm_koltukSilme f = new frm_koltukSilme(this);
+            f.Show();
         }
     }
 }
