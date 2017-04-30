@@ -50,6 +50,7 @@
     <Compile Include="array-typed-linked-list\LinkedListADT.cs" />
     <Compile Include="array-typed-linked-list\Musteri.cs" />
     <Compile Include="array-typed-linked-list\Node.cs" />
+    <Compile Include="BL.cs" />
     <Compile Include="forms\frm_MusteriBilgi.cs">
       <SubType>Form</SubType>
     </Compile>

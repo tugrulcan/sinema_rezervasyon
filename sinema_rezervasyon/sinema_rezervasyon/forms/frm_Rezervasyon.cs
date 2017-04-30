@@ -7,6 +7,8 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using LinkedListImplementation;
+using sinema_rezervasyon.forms;
 
 namespace sinema_rezervasyon
 {
@@ -15,7 +17,10 @@ namespace sinema_rezervasyon
         public frm_RezervasyonListe()
         {
             InitializeComponent();
+            BL.koltukListesi.InsertFirst(new Koltuk() { aktifMi = false }); //61 node, koltuk adlari karismasin diye.  
         }
+
+        
 
         private void frm_RezervasyonListe_Load(object sender, EventArgs e)
         {
@@ -34,12 +39,11 @@ namespace sinema_rezervasyon
                 start_location.X = 10;
                 for (int j = 0; j < 12; j++)
                 {
-                    int musteri_no = ((i * 12) + j+1);
-
+                    int koltuk_no = ((i * 12) + j+1);
                     Button b = new Button() {
                         Location = start_location,
-                        Name = "btn_musteri_" + musteri_no.ToString(),
-                        Text = musteri_no.ToString(),
+                        Name = "btn_musteri_" + koltuk_no.ToString(),
+                        Text = koltuk_no.ToString(),
                         Size = button_size,
                         BackColor = Color.Chartreuse
                     };
@@ -47,14 +51,48 @@ namespace sinema_rezervasyon
 
                     this.Controls.Add(b);
                     start_location.X += 60;
+
+                    BL.koltukListesi.InsertLast(new Koltuk() { aktifMi = false, koltukNo = koltuk_no });
                 }
             }
+            this.txt_toplamMusteriSayisi.Text = BL.koltukListesi.getAvailableSeatCount().ToString();
+        }
+
+        public void koltuklariGuncelle()
+        {
+            Node h = BL.koltukListesi.Head;
+            int koltukNo = 1;
+            while (h.Next != null)
+            {
+                var  b = Controls.Find("btn_musteri_" + koltukNo.ToString(), true)[0];
+                b = (Button)b; 
+
+                if (h.Data.aktifMi)
+                    b.BackColor = Color.Chartreuse;
+                else
+                    b.BackColor = Color.Red;
+
+                h = h.Next;
+            }
+            this.txt_toplamMusteriSayisi.Text = BL.koltukListesi.getAvailableSeatCount().ToString();
         }
 
         private void btn_musteri_n_Click(object sender, EventArgs e)
         {
+            
             Button b = (Button) sender;
             b.BackColor = Color.Red;
+
+            int koltukNo = Convert.ToInt32(b.Text);
+            frm_MusteriBilgi mbilgi = new frm_MusteriBilgi(koltukNo, this);
+
+            Node tiklanan = BL.koltukListesi.GetElement(koltukNo);
+
+            if (tiklanan.Data.aktifMi == false)
+            {
+                mbilgi.Show();
+            }
+            
 
         }
     }

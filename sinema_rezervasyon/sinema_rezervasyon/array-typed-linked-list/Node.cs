@@ -8,7 +8,7 @@ namespace LinkedListImplementation
 {
     public class Node
     {
-        public Musteri Data;
+        public Koltuk Data;
         public Node Next;
     }
 }

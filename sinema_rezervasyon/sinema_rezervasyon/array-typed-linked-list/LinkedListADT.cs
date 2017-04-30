@@ -15,9 +15,9 @@ namespace LinkedListImplementation
         public abstract void DeletePos(int position);
         public abstract string DisplayElements();
         public abstract Node GetElement(int position);
-        public abstract void InsertFirst(Musteri value);
-        public abstract void InsertLast(Musteri value);
-        public abstract void InsertPos(int position, Musteri value);
+        public abstract void InsertFirst(Koltuk value);
+        public abstract void InsertLast(Koltuk value);
+        public abstract void InsertPos(int position, Koltuk value);
 
     }
 }

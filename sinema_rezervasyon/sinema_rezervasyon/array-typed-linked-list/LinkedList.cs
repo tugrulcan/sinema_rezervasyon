@@ -74,7 +74,7 @@ namespace LinkedListImplementation
             Node tmpCurrentNode = Head;
             while (tmpCurrentNode != null)
             {
-                result += tmpCurrentNode.Data.ToString() + " ";
+                result += tmpCurrentNode.Data.ToString() + "\n";
                 tmpCurrentNode = tmpCurrentNode.Next;
             }
 
@@ -104,7 +104,7 @@ namespace LinkedListImplementation
         }
 
 
-        public override void InsertFirst(Musteri value)
+        public override void InsertFirst(Koltuk value)
         {
             Node newHead = new Node() { Data = value };
             Node tmpHead = this.Head;
@@ -114,7 +114,7 @@ namespace LinkedListImplementation
 
         }
 
-        public override void InsertLast(Musteri value)
+        public override void InsertLast(Koltuk value)
         {
             if (this.Head == null)
             {
@@ -135,7 +135,7 @@ namespace LinkedListImplementation
 
         }
 
-        public override void InsertPos(int position, Musteri value)
+        public override void InsertPos(int position, Koltuk value)
         {
             if (position < 0 || position + 1 > this.Size)
             {
@@ -162,28 +162,21 @@ namespace LinkedListImplementation
                 this.Size++;
             }
 
-            #region Çalışan ama ilk elemanı değiştirmeyen kod bloğu
+        }
 
-            //Node newNode = new Node { Data = value };
-            //if (this.Head == null)
-            //{
-            //    this.InsertFirst(value);
-            //}
+        public int getAvailableSeatCount()
+        {
+            Node n = this.Head;
+            int count = 0;
+            while (n.Next != null)
+            {
+                if (n.Data.aktifMi)
+                    count++;
 
-            //Node posNode = this.Head;
-            ////counter 1'den mi başlamalı? 
-            //for (int counter = 1; counter < position; counter++)
-            //{
-            //    posNode = posNode.Next;
-            //}
+                n = n.Next;
+            }
 
-            //Node tempNext = posNode.Next;
-            //posNode.Next = newNode;
-            //newNode.Next = tempNext;
-            //this.Size++;
-
-            #endregion
-
+            return count;
         }
     }
 }
