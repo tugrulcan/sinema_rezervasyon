@@ -46,16 +46,29 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Form1.cs">
+    <Compile Include="array-typed-linked-list\LinkedList.cs" />
+    <Compile Include="array-typed-linked-list\LinkedListADT.cs" />
+    <Compile Include="array-typed-linked-list\Musteri.cs" />
+    <Compile Include="array-typed-linked-list\Node.cs" />
+    <Compile Include="forms\frm_MusteriBilgi.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Form1.Designer.cs">
-      <DependentUpon>Form1.cs</DependentUpon>
+    <Compile Include="forms\frm_MusteriBilgi.Designer.cs">
+      <DependentUpon>frm_MusteriBilgi.cs</DependentUpon>
+    </Compile>
+    <Compile Include="forms\frm_Rezervasyon.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="forms\frm_Rezervasyon.Designer.cs">
+      <DependentUpon>frm_Rezervasyon.cs</DependentUpon>
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <EmbeddedResource Include="Form1.resx">
-      <DependentUpon>Form1.cs</DependentUpon>
+    <EmbeddedResource Include="forms\frm_MusteriBilgi.resx">
+      <DependentUpon>frm_MusteriBilgi.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="forms\frm_Rezervasyon.resx">
+      <DependentUpon>frm_Rezervasyon.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
