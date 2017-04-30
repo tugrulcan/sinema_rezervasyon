@@ -101,6 +101,16 @@ namespace sinema_rezervasyon
                 frm_MusteriBilgi mbilgi = new frm_MusteriBilgi(koltukNo, this);
                 mbilgi.Show();
             }
+            else
+            {
+                string s = tiklanan.Data.Ad + " " + tiklanan.Data.Soyad + " koltuk no: " + tiklanan.Data.koltukNo;
+                if (MessageBox.Show( s+ " için rezervasyonun iptal edilmesini onaylıyor musunuz?", "Rezervasyon iptali", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
+                {
+                    BL.koltukListesi.DeletePos(tiklanan.Data.koltukNo);
+                    BL.koltukListesi.InsertPos(tiklanan.Data.koltukNo, new Koltuk() { rezerveEdilebilirMi = true, koltukNo = tiklanan.Data.koltukNo });
+
+                }
+            }
             this.koltuklariGuncelle();
             
 
