@@ -5,7 +5,7 @@ Bollywood Sinemasına gelen 60 müşteri bir liste oluşturmaktadır. Her bir m�
 koltuk düzeni göz önünde bulundurularak, tercih ettiği koltuk numarasına göre (koltuğun boş olması
 şartı ile) bilet almaktadır. Müşteri dilerse almış olduğu bileti iptal ettirebilmektedir. Bu durumda o
 koltuk diğer müşterilerin satın almasına uygun hale gelmektedir. Sizden bu problemi çözmeniz için
-tek yönlü bağlı liste (Single Linked List) örneği oluşturmanız beklenmektedir.
+_tek yönlü bağlı liste_ örneği oluşturmanız beklenmektedir.
 
 ##### Soru 2: Kuyruk Implemantasyonu 
 Turgutlu bankasına gelen 20 müşteri bir kuyruk oluşturmaktadır. Her bir müşterinin kendine özel 60 - 600 saniye arasında rastgele bir işlem süresi bulunmaktadır. 
