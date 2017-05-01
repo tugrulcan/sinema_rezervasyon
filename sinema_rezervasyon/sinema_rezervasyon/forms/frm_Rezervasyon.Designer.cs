@@ -36,7 +36,7 @@
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(450, 9);
+            this.label1.Location = new System.Drawing.Point(450, 21);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(106, 13);
             this.label1.TabIndex = 0;
@@ -45,18 +45,18 @@
             // txt_toplamMusteriSayisi
             // 
             this.txt_toplamMusteriSayisi.Enabled = false;
-            this.txt_toplamMusteriSayisi.Location = new System.Drawing.Point(562, 6);
+            this.txt_toplamMusteriSayisi.Location = new System.Drawing.Point(562, 17);
             this.txt_toplamMusteriSayisi.Name = "txt_toplamMusteriSayisi";
             this.txt_toplamMusteriSayisi.Size = new System.Drawing.Size(49, 20);
             this.txt_toplamMusteriSayisi.TabIndex = 1;
             // 
             // btn_koltukIptal
             // 
-            this.btn_koltukIptal.Location = new System.Drawing.Point(297, 9);
+            this.btn_koltukIptal.Location = new System.Drawing.Point(300, 16);
             this.btn_koltukIptal.Name = "btn_koltukIptal";
-            this.btn_koltukIptal.Size = new System.Drawing.Size(75, 23);
+            this.btn_koltukIptal.Size = new System.Drawing.Size(118, 23);
             this.btn_koltukIptal.TabIndex = 2;
-            this.btn_koltukIptal.Text = "Koltuk İptali";
+            this.btn_koltukIptal.Text = "İsimle Koltuk İptali";
             this.btn_koltukIptal.UseVisualStyleBackColor = true;
             this.btn_koltukIptal.Click += new System.EventHandler(this.btn_koltukIptal_Click);
             // 

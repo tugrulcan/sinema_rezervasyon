@@ -5,7 +5,7 @@ VisualStudioVersion = 14.0.25420.1
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "sinema_rezervasyon", "sinema_rezervasyon\sinema_rezervasyon.csproj", "{571DDCC4-903F-4CB3-ADA4-A4B614D03A7F}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "KuyrukImplementasyonu", "..\kuyruk_implementasyonu\KuyrukImplementasyonu\KuyrukImplementasyonu.csproj", "{567747EA-3769-417A-AB1F-ECDE1EB17950}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "kuyruk_implementasyonu", "..\kuyruk_implementasyonu\KuyrukImplementasyonu\kuyruk_implementasyonu.csproj", "{567747EA-3769-417A-AB1F-ECDE1EB17950}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
